@@ -1,0 +1,80 @@
+.RegistrationForm > h2 {
+    margin-bottom: 0;
+    font-size: 36px;
+}
+
+.RegistrationForm > h3 {
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.RegistrationForm {
+    width: 380px;
+    font-weight: 400;
+}
+
+.RegistrationForm > div {
+    margin-bottom: 20px;
+}
+
+.RegistrationForm > div > input {
+    width: 100%;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid #bdbdbd;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.RegistrationForm > div > input:focus, .nameContainer > div > input:focus, .registerButton:focus {
+    outline: none;
+}
+
+.first_name, .last_name {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+.registerButton {
+    width: 100%;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightblue;
+}
+
+.registerButton:hover {
+    background-color: #424242;
+    border: 1px solid #424242;
+    color: lightblue;
+    cursor: pointer;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nameContainer > div > input {
+    margin-top: 4px;
+    font-size: 18px;
+    padding: 8px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 500px) {
+    .RegistrationForm {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
+}
+

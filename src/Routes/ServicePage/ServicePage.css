@@ -1,0 +1,69 @@
+.servicePage {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.edit {
+    text-decoration: none;
+    color: lightblue;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 30px;
+    background-color: #424242;
+}
+
+.edit:hover {
+    background-color: lightblue;
+    border: 1px solid #424242;
+    color: #424242;
+    cursor: pointer;
+}
+
+.ServicePage_reviews-list {
+    margin-top: 40px;
+    padding: 0;
+}
+
+.ServicePage_reviews-list > li {
+    list-style: none;
+    border: 1px solid #424242;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding-left: 16px;
+}
+
+.reviewDelete {
+    text-decoration: none;
+    color: lightblue;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 30px;
+    background-color: #424242;
+    margin-bottom: 10px;
+}
+
+.reviewDelete:hover {
+    background-color: lightblue;
+    border: 1px solid #424242;
+    color: #424242;
+    cursor: pointer;
+}
+
+.noReviews {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.line {
+    width: 100%;
+    border: solid 1.5px #424242;
+    margin: 30px auto 30px auto; 
+}
+
+@media screen and (max-width: 500px) {
+    .servicePage {
+        width: 85%;
+    }
+}

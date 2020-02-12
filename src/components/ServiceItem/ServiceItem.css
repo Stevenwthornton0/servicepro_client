@@ -1,0 +1,7 @@
+.service {
+    margin-bottom: 30px;
+}
+
+.service > h2 {
+    font-size: 28px;
+}

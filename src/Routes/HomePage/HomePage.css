@@ -1,0 +1,114 @@
+.infoContainer {
+    width: 500px;
+    line-height: 2em;
+    font-size: 18px;
+}
+
+.homePage-left {
+    margin-top: 2em;
+}
+
+.optionsContainer {
+    line-height: 5em;
+    width: fit-content;
+}
+
+.optionsContainer > div > span {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.optionsContainer > div > .logo {
+    margin-left: 0;
+    font-size: 32px;
+    color: #757575;
+}
+
+.homePage {
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 70px;
+    width: 68%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+    .dunno {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttonContainer {
+        margin-top: 40px;
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .getStarted {
+        margin-top: 40px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        border: 1px solid lightblue;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: 400;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: lightblue;
+    }
+
+    .infoContainer {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+    }
+
+    .infoContainer > h3 {
+        font-size: 14px;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 400;
+    }
+
+    .infoContainer > h2 {
+        font-size: 27px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .homePage-left {
+        margin-top: 0;
+    }
+
+    .homePage {
+        width: 100%;
+    }
+
+    .optionsContainer {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .optionsContainer > div > span {
+        margin-left: 10px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    .optionsContainer > div > .logo {
+        margin-left: 0;
+        font-size: 26px;
+        color: #757575;
+    }
+}

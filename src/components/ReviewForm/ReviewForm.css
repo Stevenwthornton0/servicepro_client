@@ -1,0 +1,57 @@
+.ReviewForm {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-bottom: 100px;
+}
+
+.ReviewForm > textarea {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    resize: none;
+    border-radius: 4px;
+}
+
+.rating {
+    width: fit-content;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+
+.review > h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.reviewPost {
+    width: 100%;
+    margin-left: 0;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: lightblue;
+}
+
+.reviewPost:hover {
+    background-color: #424242;
+    border: 1px solid #424242;
+    color: lightblue;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .ReviewForm {
+        width: 100%;
+    }
+
+    .rating {
+        width: 50%;
+    }
+}

@@ -1,0 +1,78 @@
+.serviceContainer1, .serviceContainer2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+.serviceContainer1 > a, .serviceContainer2 > a {
+    width: 230px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border: 2px solid #bdbdbd;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.serviceContainer1 > a:hover, .serviceContainer2 > a:hover {
+    background-color: lightblue;
+    border: 1px solid lightblue;
+}
+
+.serviceContainer1 > a:last-child, .serviceContainer2 > a:last-child {
+    margin-right: 0;
+}
+
+.serviceContainer1 > a > p, .serviceContainer2 > a > p {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    color: #424242;
+}
+
+.services {
+    margin-top: 70px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .services {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        margin-top: 30px;
+    }
+
+    .serviceContainer1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .serviceContainer2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .serviceContainer1 > a, .serviceContainer2 > a {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+    }
+
+    .serviceContainer1 > a > p, .serviceContainer2 > a > p {
+        margin-bottom: 0px;
+    }
+}

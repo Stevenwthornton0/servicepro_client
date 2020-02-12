@@ -1,0 +1,66 @@
+.providerRegistration {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+
+.providerRegistration > h2 {
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.providerRegistration > div {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+.providerRegistration > div > input, .providerRegistration > div > select {
+    font-size: 16px;
+    padding: 8px;
+}
+
+.providerRegistration > div > textarea {
+    font-size: 16px;
+    resize: none;
+}
+
+.providerRegistration > div > input, .providerRegistration > div > textarea, .providerRegistration > div > select {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #bdbdbd;
+}
+
+.providerRegButton {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightblue;
+}
+
+.providerRegButton:hover {
+    background-color: #424242;
+    border: 1px solid #424242;
+    color: lightblue;
+    cursor: pointer;
+}
+
+.providerRegButton:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 500px) {
+    .providerRegistration {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
