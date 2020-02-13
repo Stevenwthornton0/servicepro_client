@@ -6,6 +6,7 @@ import AuthApiService from '../../services/auth-api-service';
 import TokenService from '../../services/token-service';
 import ReviewForm from '../../components/ReviewForm/ReviewForm';
 import ServicesContext from '../../contexts/ServicesContext';
+import LoaderSpinner from '../../Utils/LoaderSpinner';
 import './ServicePage.css';
 
 class ServicePage extends Component {
@@ -16,6 +17,7 @@ class ServicePage extends Component {
     }
 
     componentDidMount() {
+        this.context.waitingTrue();
         const { serviceId } = this.props.match.params
         ServicesService.getService(serviceId)
             .then(service => {
@@ -25,6 +27,7 @@ class ServicePage extends Component {
         ServicesService.getServiceReviews(serviceId)
             .then(reviews => {
                 this.context.setReviews(reviews)
+                this.context.waitingFalse()
             })
         AuthApiService.getUser(TokenService.getUsername())
             .then(user => {
@@ -35,6 +38,7 @@ class ServicePage extends Component {
 
     componentWillUnmount() {
         this.context.clearService()
+        this.context.clearReviews()
     }
 
     deleteReview = (reviewId) => {
@@ -82,21 +86,29 @@ class ServicePage extends Component {
     }
 
     render() {
-        const { reviews, isAdmin, service } = this.context;
+        const { reviews, isAdmin, service, waiting } = this.context;
+        const content = 
+        <div className='servicePage'>
+
+            <ServiceItem 
+                service={service}
+            />
+
+            <this.ownerEdit />
+
+            <this.serviceReviews reviews={reviews} isAdmin={isAdmin} deleteReview={this.deleteReview}/>
+
+            <div className='line'></div>
+
+            <ReviewForm />
+        </div>
 
         return (
-            <div className='servicePage'>
-                <ServiceItem 
-                    service={service}
-                />
-
-                <this.ownerEdit />
-
-                <this.serviceReviews reviews={reviews} isAdmin={isAdmin} deleteReview={this.deleteReview}/>
-
-                <div className='line'></div>
-
-                <ReviewForm />
+            <div>
+                <div className='loader'>
+                    {waiting && <LoaderSpinner />}
+                </div>
+                {!waiting && content}
             </div>
         )
     }

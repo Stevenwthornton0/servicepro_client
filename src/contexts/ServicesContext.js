@@ -9,6 +9,7 @@ const ServicesContext = React.createContext({
     serviceUserId: 1,
     error: null,
     open: false,
+    waiting: false,
     setError: () => {},
     setAdmin: () => {},
     setUser: () => {},
@@ -33,7 +34,16 @@ export class ServicesProvider extends Component {
         serviceUserId: null,
         error: null,
         isAdmin: false,
-        open: false
+        open: false,
+        waiting: false,
+    }
+
+    waitingTrue = () => {
+        this.setState({ waiting: true })
+    }
+
+    waitingFalse = () => {
+        this.setState({ waiting: false })
     }
 
     setOpen = (e) => {
@@ -79,6 +89,10 @@ export class ServicesProvider extends Component {
         ])
     }
 
+    clearReviews = () => {
+        this.setState({ reviews: [] })
+    }
+
     setServiceList = serviceList => {
         this.setState({ serviceList })
     }
@@ -97,6 +111,9 @@ export class ServicesProvider extends Component {
             serviceUserId: this.state.serviceUserId,
             isAdmin: this.state.isAdmin,
             open: this.state.open,
+            waiting: this.state.waiting,
+            waitingTrue: this.waitingTrue,
+            waitingFalse: this.waitingFalse,
             setOpen: this.setOpen,
             setError: this.setError,
             setAdmin: this.setAdmin,
@@ -108,7 +125,8 @@ export class ServicesProvider extends Component {
             setServiceList: this.setServiceList,
             clearServiceList: this.clearServiceList,
             setReviews: this.setReviews,
-            addReview: this.addReview
+            addReview: this.addReview,
+            clearReviews: this.clearReviews
         }
 
         return (

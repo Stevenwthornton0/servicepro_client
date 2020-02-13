@@ -4,6 +4,7 @@ import ServiceListItem from '../../components/ServiceListItem/ServiceListItem';
 import AuthApiService from '../../services/auth-api-service';
 import TokenService from '../../services/token-service';
 import ServicesContext from '../../contexts/ServicesContext';
+import LoaderSpinner from '../../Utils/LoaderSpinner';
 import './ServiceList.css';
 
 class ServiceList extends Component {
@@ -18,10 +19,12 @@ class ServiceList extends Component {
     } 
 
     componentDidMount() {
+        this.context.waitingTrue()
         const { serviceType } = this.state;
         ServicesApiService.getServicesList(serviceType)
             .then(res => {
                     this.context.setServiceList(res)
+                    this.context.waitingFalse()
                 })
         AuthApiService.getUser(TokenService.getUsername())
         .then(user => {
@@ -62,8 +65,13 @@ class ServiceList extends Component {
     }
 
     render () {
+        const { waiting } = this.context;
         return (
             <div className='serviceList'>
+                <div className='loader'>
+                    {waiting && <LoaderSpinner />}
+                </div>
+
                 {this.handleServices()}
             </div>
         )

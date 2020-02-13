@@ -11,6 +11,8 @@
 .RegistrationForm {
     width: 380px;
     font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .RegistrationForm > div {

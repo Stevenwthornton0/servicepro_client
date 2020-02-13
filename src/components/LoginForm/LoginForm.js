@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AuthApiService from '../../services/auth-api-service';
 import TokenService from '../../services/token-service';
 import ServicesContext from '../../contexts/ServicesContext';
+import LoaderSpinner from '../../Utils/LoaderSpinner';
 import './LoginForm.css';
 
 class LoginForm extends Component {
@@ -11,7 +12,6 @@ class LoginForm extends Component {
         super(props)
         this.state = {
             error: null,
-            waiting: false
         }
     }
 
@@ -23,8 +23,8 @@ class LoginForm extends Component {
         ev.preventDefault()
         this.setState({ 
             error: null,
-            waiting: true,
         })
+        this.context.waitingTrue();
         const { user_name, password } = ev.target;
 
         AuthApiService.postLogin({
@@ -36,7 +36,7 @@ class LoginForm extends Component {
                 user_name.value = ''
                 password.value = ''
                 TokenService.saveAuthToken(res.authToken)
-                this.setState({ waiting: false })
+                this.context.waitingFalse()
                 this.props.onLoginSuccess()
             })
             .catch(res => {
@@ -49,6 +49,7 @@ class LoginForm extends Component {
 
     render() {
         const { error } = this.state;
+        const { waiting } = this.context;
         return (
             <form 
                 className='loginForm'
@@ -84,6 +85,10 @@ class LoginForm extends Component {
                 <button type='submit' className='loginButton'>
                     Log in
                 </button>
+
+                <div className='loader'>
+                    {waiting && <LoaderSpinner />}
+                </div>    
             </form>
         )
     }
