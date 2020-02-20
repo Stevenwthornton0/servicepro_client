@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import AuthApiService from '../../services/auth-api-service';
+import LoaderSpinner from '../../Utils/LoaderSpinner';
+import ServicesContext from '../../contexts/ServicesContext';
 import './Registration.css';
 
 class Registration extends Component {
 
     state = { error: null };
+
+    static contextType = ServicesContext;
 
     static defaultProps = {
         onRegistrationSuccess: () => {},
@@ -12,13 +16,14 @@ class Registration extends Component {
 
     handleSubmit = ev => {
         ev.preventDefault()
+        this.context.waitingTrue()
         const { first_name, last_name, user_name, password, email } = ev.target;
 
         this.setState({ error: null });
         AuthApiService.postUser({
             first_name: first_name.value,
             last_name: last_name.value,
-            user_name: user_name.value,
+            user_name: user_name.value.toLowerCase(),
             email: email.value,
             password: password.value,
             admin: 'false'
@@ -29,15 +34,17 @@ class Registration extends Component {
                 user_name.value = ''
                 email.value=''
                 password.value = ''
+                this.context.waitingFalse()
                 this.props.onRegistrationSuccess()
             })
             .catch(res => {
                 this.setState({error: res.error })
+                this.context.waitingFalse()
             })
     }
 
     render() {
-
+        const { waiting } = this.context;
         const { error } = this.state;
         return(
             <form
@@ -47,7 +54,7 @@ class Registration extends Component {
                 <h2>Sign Up</h2>
                 <h3>It's quick and easy.</h3>
 
-                <div role='alert'>
+                <div role='alert' className='red'>
                     {error && <p>{error}</p>}
                 </div>
                 <div className='nameContainer'>
@@ -110,6 +117,10 @@ class Registration extends Component {
                 <button type='submit' className='registerButton'>
                     Sign Up
                 </button>
+
+                <div className='loader'>
+                    {waiting && <LoaderSpinner />}
+                </div>
             </form>
         )
     }

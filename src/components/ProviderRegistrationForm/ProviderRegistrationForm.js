@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ServicesService from '../../services/services-api-service';
 import ServicesContext from '../../contexts/ServicesContext';
+import LoaderSpinner from '../../Utils/LoaderSpinner';
 import './ProviderRegistrationForm.css';
 
 class ProviderRegistrationForm extends Component {
@@ -22,9 +23,11 @@ class ProviderRegistrationForm extends Component {
 
     handleSubmit = ev => {
         ev.preventDefault()
+        this.context.waitingTrue()
         const { service_type, name, about, phone, email } = ev.target;
 
         this.setState({ error: null })
+        
         ServicesService.postService({
             service_type: service_type.value,
             name: name.value,
@@ -38,19 +41,22 @@ class ProviderRegistrationForm extends Component {
                 about.value=''
                 phone.value=''
                 email.value=''
+                this.context.waitingFalse()
                 this.props.onRegistrationSuccess()
             })
             .catch(res => {
                 this.setState({ error: res.error })
+                this.context.waitingFalse();
             })
     }
 
     render() {
         const { error } = this.state;
+        const { waiting } = this.context;
         return (
             <form className='providerRegistration' onSubmit={this.handleSubmit}>
 
-                <div role='alert'>
+                <div role='alert' className='red'>
                     {error && <p>{error}</p>}
                 </div>
 
@@ -120,6 +126,10 @@ class ProviderRegistrationForm extends Component {
                 <button className='providerRegButton' type='submit'>
                     Register
                 </button>
+
+                <div className='loader'>
+                    {waiting && <LoaderSpinner />}
+                </div>
             </form>
         )
     }

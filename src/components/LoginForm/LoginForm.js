@@ -28,7 +28,7 @@ class LoginForm extends Component {
         const { user_name, password } = ev.target;
 
         AuthApiService.postLogin({
-            user_name: user_name.value,
+            user_name: user_name.value.toLowerCase(),
             password: password.value
         })
             .then(res => {
@@ -42,8 +42,8 @@ class LoginForm extends Component {
             .catch(res => {
                 this.setState({ 
                     error: res.error,
-                    waiting: false
                 })
+                this.context.waitingFalse()
             })
     }
 
@@ -55,7 +55,7 @@ class LoginForm extends Component {
                 className='loginForm'
                 onSubmit={this.handleSubmitJwtAuth}
             >
-                <div role='alert'>
+                <div role='alert' className='red'>
                     {error && <p className='error'>{error}</p>}
                 </div>
                 
