@@ -1,7 +1,6 @@
 {
     "version": 2,
     "alias": "stevenwthornton-servicpro-app",
-    "name": "servicepro-app",
     "routes": [
         { "handle": "filesystem" },
         { "src": "/.*", "dest": "/index.html" }
