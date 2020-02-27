@@ -1,8 +1,8 @@
 .serviceEdit {
-    width: 30%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .serviceEdit > div {
@@ -39,20 +39,20 @@
     background-color: lightblue;
 }
 
-.editButton:hover {
-    background-color: #424242;
-    border: 1px solid #424242;
-    color: lightblue;
-    cursor: pointer;
-}
-
 .editButton:focus {
     outline: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
     .serviceEdit {
-        width: 80%;
-        margin-bottom: 50px;
+        width: 30%;
+        margin-bottom: 40px;
+    }
+
+    .editButton:hover {
+        background-color: #424242;
+        border: 1px solid #424242;
+        color: lightblue;
+        cursor: pointer;
     }
 }

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceItem component renders without crashing 1`] = `
+<div
+  className="service"
+>
+  <h2 />
+  <p
+    className="bold"
+  >
+    Phone: 
+  </p>
+  <p
+    className="bold"
+  >
+    Email: 
+    <span
+      className="notBold"
+    />
+  </p>
+  <p />
+</div>
+`;

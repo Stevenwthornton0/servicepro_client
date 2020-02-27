@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registration component renders without crashing 1`] = `
+<form
+  className="RegistrationForm"
+  onSubmit={[Function]}
+>
+  <h2>
+    Sign Up
+  </h2>
+  <h3>
+    It's quick and easy.
+  </h3>
+  <div
+    className="red"
+    role="alert"
+  />
+  <div
+    className="nameContainer"
+  >
+    <div
+      className="first_name"
+    >
+      <label
+        htmlFor="RegistrationForm_first-name"
+      >
+        First Name
+      </label>
+      <input
+        id="RegistrationForm_first-name"
+        name="first_name"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="last_name"
+    >
+      <label
+        htmlFor="RegistrationForm_last-name"
+      >
+        Last Name
+      </label>
+      <input
+        id="RegistrationForm_last-name"
+        name="last_name"
+        required={true}
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="email"
+  >
+    <label
+      htmlFor="RegistrationForm_email"
+    >
+      Email
+    </label>
+    <input
+      id="RegistrationForm_email"
+      name="email"
+      required={true}
+      type="email"
+    />
+  </div>
+  <div
+    className="user_name"
+  >
+    <label
+      htmlFor="RegistrationForm_user-name"
+    >
+      User Name
+    </label>
+    <input
+      id="RegistrationForm_user-name"
+      name="user_name"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="pass_word"
+  >
+    <label
+      htmlFor="RegistrationForm_password"
+    >
+      Password
+    </label>
+    <input
+      id="RegistrationForm_password"
+      name="password"
+      required={true}
+      type="password"
+    />
+  </div>
+  <button
+    className="registerButton"
+    type="submit"
+  >
+    Sign Up
+  </button>
+  <div
+    className="loader"
+  />
+</form>
+`;

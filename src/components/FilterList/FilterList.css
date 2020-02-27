@@ -1,0 +1,100 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.filterForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.filterForm > div {
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filterForm * button {
+    font-size: 14px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    padding: 3px 6px 3px 6px;
+    margin-top: 16px;
+    width: 48%;
+}
+
+#butContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filterForm * label {
+    margin-bottom: 4px;
+}
+
+.filterForm * input {
+    padding: 3px 6px 3px 6px;
+    font-size: 14px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.filter > p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 500px) {
+    .filterForm * button:hover {
+        cursor: pointer;
+        background-color: lightblue;
+    }
+
+    .filterForm * button {
+        margin-top: 0;
+    }
+
+    #butContainer {
+        margin-right: 0;
+        width: 50%;
+    }
+
+    .filter {
+        width: 900px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .filter > p {
+        margin-bottom: 0;
+    }
+
+    .filterForm {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+    }
+
+    .filterForm * input {
+        margin-bottom: 0;
+    }
+
+    .filterForm * label {
+        margin-bottom: 0;
+        margin-right: 4px;
+    }
+
+    .filterForm > div {
+        display: flex;
+        flex-direction: row;
+    }
+}

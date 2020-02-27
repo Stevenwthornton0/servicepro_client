@@ -2,7 +2,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 120px;
-    width: 25%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     margin-top: 90px;
@@ -60,8 +60,8 @@
     margin-top: 60px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
     .loginForm {
-        width: 60%;
+        width: 25%;
     }
 }

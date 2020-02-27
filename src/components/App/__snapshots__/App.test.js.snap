@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="header"
+  >
+    <Header />
+  </header>
+  <main
+    className="App_main"
+  >
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <PrivateOnlyRoute
+        component={[Function]}
+        path="/provider/registration"
+      />
+      <PrivateOnlyRoute
+        component={[Function]}
+        exact={true}
+        path="/services"
+      />
+      <PrivateOnlyRoute
+        component={[Function]}
+        exact={true}
+        path="/services/:serviceType"
+      />
+      <PrivateOnlyRoute
+        component={[Function]}
+        exact={true}
+        path="/services/service/:serviceId"
+      />
+      <PrivateOnlyRoute
+        component={[Function]}
+        exact={true}
+        path="/services/service/:serviceId/edit"
+      />
+      <PublicOnlyRoute
+        component={[Function]}
+        exact={true}
+        path="/register"
+      />
+      <PublicOnlyRoute
+        component={[Function]}
+        path="/login"
+      />
+    </Switch>
+  </main>
+</div>
+`;

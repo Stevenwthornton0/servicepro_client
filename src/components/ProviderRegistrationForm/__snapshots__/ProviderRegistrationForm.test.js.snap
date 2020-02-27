@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProviderRegistrationForm component renders without crashing 1`] = `
+<form
+  className="providerRegistration"
+  onSubmit={[Function]}
+>
+  <div
+    className="red"
+    role="alert"
+  />
+  <h2>
+    Register a Service
+  </h2>
+  <div>
+    <label>
+      Service Type
+    </label>
+    <select
+      id="service_type"
+    >
+      <option
+        value="..."
+      >
+        ...
+      </option>
+      <option
+        value="mechanic"
+      >
+        Mechanic
+      </option>
+      <option
+        value="plumbing"
+      >
+        Plumbing
+      </option>
+      <option
+        value="remodeling"
+      >
+        Home Remodel
+      </option>
+      <option
+        value="lawnscaping"
+      >
+        Lawnscaping
+      </option>
+      <option
+        value="travel"
+      >
+        Travel
+      </option>
+      <option
+        value="hair"
+      >
+        Hair Stylist
+      </option>
+      <option
+        value="jobs"
+      >
+        Employment
+      </option>
+      <option
+        value="phone"
+      >
+        Phone Repair
+      </option>
+    </select>
+  </div>
+  <div>
+    <label>
+      Business Name
+    </label>
+    <input
+      id="ProviderRegistration_name"
+      name="name"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div>
+    <label>
+      Business Description
+    </label>
+    <textarea
+      aria-label="Business Description"
+      cols="30"
+      id="about"
+      placeholder="Tell us about your business..."
+      required={true}
+      rows="4"
+    />
+  </div>
+  <div>
+    <label>
+      Phone
+    </label>
+    <input
+      id="ProviderRegistration_phone"
+      name="phone"
+      required={true}
+      type="tel"
+    />
+  </div>
+  <div>
+    <label>
+      Email
+    </label>
+    <input
+      id="ProviderRegistration_email"
+      name="email"
+      required={true}
+      type="email"
+    />
+  </div>
+  <button
+    className="providerRegButton"
+    type="submit"
+  >
+    Register
+  </button>
+  <div
+    className="loader"
+  />
+</form>
+`;

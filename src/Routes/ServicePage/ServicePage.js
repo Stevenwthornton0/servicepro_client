@@ -85,6 +85,18 @@ class ServicePage extends Component {
         return null
     }
 
+    displayReview = () => {
+        const { user, serviceUserId } = this.context;
+
+        if (user !== serviceUserId) {
+            return (
+                <ReviewForm />
+            )
+        }
+
+        return null
+    }
+
     render() {
         const { reviews, isAdmin, service, waiting } = this.context;
         const content = 
@@ -100,7 +112,7 @@ class ServicePage extends Component {
 
             <div className='line'></div>
 
-            <ReviewForm />
+            <this.displayReview />
         </div>
 
         return (

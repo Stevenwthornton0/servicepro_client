@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditPage component renders without crashing 1`] = `
+<EditPage
+  match={
+    Object {
+      "isExact": true,
+      "params": Object {
+        "serviceId": "1",
+      },
+      "path": "/services/service/:serviceId/edit",
+      "url": "/services/service/1/edit",
+    }
+  }
+>
+  <form
+    className="serviceEdit"
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <div>
+      <p
+        className="type"
+      >
+        Service Type: 
+      </p>
+    </div>
+    <div>
+      <label>
+        Business Name
+      </label>
+      <input
+        id="ProviderRegistration_name"
+        name="name"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div>
+      <label>
+        Business Description
+      </label>
+      <textarea
+        aria-label="Business Description"
+        cols="30"
+        id="about"
+        required={true}
+        rows="7"
+      />
+    </div>
+    <div>
+      <label>
+        Phone
+      </label>
+      <input
+        id="ProviderRegistration_phone"
+        name="phone"
+        required={true}
+        type="tel"
+      />
+    </div>
+    <div>
+      <label>
+        Email
+      </label>
+      <input
+        id="ProviderRegistration_email"
+        name="email"
+        required={true}
+        type="email"
+      />
+    </div>
+    <button
+      className="editButton"
+      type="submit"
+    >
+      update
+    </button>
+  </form>
+</EditPage>
+`;

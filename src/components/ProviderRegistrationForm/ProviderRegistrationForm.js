@@ -42,7 +42,7 @@ class ProviderRegistrationForm extends Component {
                 phone.value=''
                 email.value=''
                 this.context.waitingFalse()
-                this.props.onRegistrationSuccess()
+                this.props.onRegistrationSuccess(service.id)
             })
             .catch(res => {
                 this.setState({ error: res.error })
@@ -66,8 +66,8 @@ class ProviderRegistrationForm extends Component {
 
                 <div>
                     <label>Service Type</label>
-                    <select id='service_type'>
-                        <option value='...'>...</option>
+                    <select id='service_type' required>
+                        <option value=''>...</option>
                         <option value='mechanic'>Mechanic</option>
                         <option value='plumbing'>Plumbing</option>
                         <option value='remodeling'>Home Remodel</option>
@@ -106,11 +106,10 @@ class ProviderRegistrationForm extends Component {
                     <input 
                         name='phone'
                         type='tel'
-                        // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         required
+                        pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
                         id='ProviderRegistration_phone'
                     />
-                    {/* <small>Format: 123-456-7890</small> */}
                 </div>
 
                 <div>

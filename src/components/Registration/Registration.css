@@ -9,7 +9,7 @@
 }
 
 .RegistrationForm {
-    width: 380px;
+    width: 80%;
     font-weight: 400;
     margin-left: auto;
     margin-right: auto;
@@ -69,12 +69,15 @@
     border: 1px solid #bdbdbd;
     border-radius: 4px;
 }
+.requires {
+    line-height: 8px;
+    font-size: 12px;
+    color: #424242
+}
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
     .RegistrationForm {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 380px;
     }
 
     

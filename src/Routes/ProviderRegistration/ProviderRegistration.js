@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import ProviderRegistrationForm from '../../components/ProviderRegistrationForm/ProviderRegistrationForm';
-import './ProviderRegistration.css';
 
 class ProviderRegistration extends Component {
 
-    handleRegistrationSuccess = service => {
+    handleRegistrationSuccess = serviceId => {
         const { history } = this.props;
-        history.push('/services')
+        history.push(`/services/service/${serviceId}`)
     }
 
     render() {

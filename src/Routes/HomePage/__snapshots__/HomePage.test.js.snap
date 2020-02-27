@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage component renders without crashing 1`] = `
+<div
+  className="homePage"
+>
+  <div
+    className="homePage-left"
+  >
+    <div
+      className="infoContainer"
+    >
+      <h2>
+        Welcome to ServicePRO!
+      </h2>
+      <h3>
+        We provide an easy connection between those seeking a service, and Service Providers.
+      </h3>
+    </div>
+    <div
+      className="optionsContainer"
+    >
+      <div>
+        <FontAwesomeIcon
+          border={false}
+          className="logo"
+          fixedWidth={false}
+          flip={null}
+          icon="search"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+        <span>
+          Find a Service Provider for anything you need
+        </span>
+      </div>
+      <div>
+        <FontAwesomeIcon
+          border={false}
+          className="logo"
+          fixedWidth={false}
+          flip={null}
+          icon="newspaper"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+        <span>
+          Leave a review for our Service Providers
+        </span>
+      </div>
+      <div>
+        <FontAwesomeIcon
+          border={false}
+          className="logo"
+          fixedWidth={false}
+          flip={null}
+          icon="user-plus"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+        <span>
+          Register your business as a Service Provider
+        </span>
+      </div>
+    </div>
+    <div
+      className="dunno"
+    >
+      <Link
+        className="mobile buttonContainer"
+        to="/register"
+      >
+        <button
+          className="getStarted"
+        >
+          Get Started
+        </button>
+      </Link>
+    </div>
+  </div>
+  <div
+    className="computer"
+  >
+    <Registration
+      onRegistrationSuccess={[Function]}
+    />
+  </div>
+</div>
+`;

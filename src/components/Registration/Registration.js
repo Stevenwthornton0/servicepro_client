@@ -107,12 +107,22 @@ class Registration extends Component {
                     <label htmlFor='RegistrationForm_password'>
                         Password
                     </label>
+                    <p className='requires computer'>
+                        Uppercase, lowercase, number & special character required
+                    </p>
                     <input
                         name='password'
                         type='password'
                         required
                         id='RegistrationForm_password'
                     />
+                </div>
+                <div className='requires mobile'>
+                    <p className='requires'>Requirements:</p>
+                    <p>&bull; an uppercase letter</p>
+                    <p>&bull; a lowercase letter</p>
+                    <p>&bull; a number</p>
+                    <p>&bull; a special character</p>
                 </div>
                 <button type='submit' className='registerButton'>
                     Sign Up

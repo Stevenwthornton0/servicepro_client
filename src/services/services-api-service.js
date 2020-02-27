@@ -3,18 +3,32 @@ import TokenService from './token-service';
 
 const ServicesApiService = {
 
-    getServicesList(page) {
-        return fetch(`${config.API_ENDPOINT}/services/${page}`, {
-            method: 'GET',
-            headers: {
-                'content-type': 'application/json'
-            }
-        })
-            .then(res => 
-                (!res.ok)
-                    ? res.json().then(e => Promise.reject(e))
-                    : res.json()
-                )
+    getServicesList(page, city = '', state = '') {
+        if (city !== '' && state !== '') {
+            return fetch(`${config.API_ENDPOINT}/services/${page}?city=${city}&state=${state}`, {
+                method: 'GET',
+                headers: {
+                    'content-type': 'application/json'
+                }
+            })
+                .then(res => 
+                    (!res.ok)
+                        ? res.json().then(e => Promise.reject(e))
+                        : res.json()
+                    )
+        } else {
+            return fetch(`${config.API_ENDPOINT}/services/${page}`, {
+                method: 'GET',
+                headers: {
+                    'content-type': 'application/json'
+                }
+            })
+                .then(res => 
+                    (!res.ok)
+                        ? res.json().then(e => Promise.reject(e))
+                        : res.json()
+                    )
+        }
     },
 
     getService(serviceId) {

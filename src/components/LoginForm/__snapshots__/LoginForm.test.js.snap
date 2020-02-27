@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm component renders without crashing 1`] = `
+<form
+  className="loginForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="red"
+    role="alert"
+  />
+  <div
+    className="username"
+  >
+    <label
+      htmlFor="LoginForm_username"
+    >
+      Username
+    </label>
+    <input
+      className="username_input"
+      id="LoginForm_username"
+      name="user_name"
+      required={true}
+    />
+  </div>
+  <div
+    className="password"
+  >
+    <label
+      htmlFor="LoginForm_password"
+    >
+      Password
+    </label>
+    <input
+      className="password_input"
+      id="LoginForm_passsword"
+      name="password"
+      required={true}
+      type="password"
+    />
+  </div>
+  <button
+    className="loginButton"
+    type="submit"
+  >
+    Log in
+  </button>
+  <div
+    className="loader"
+  />
+</form>
+`;

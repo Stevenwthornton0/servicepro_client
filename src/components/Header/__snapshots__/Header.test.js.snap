@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders without crashing 1`] = `
+<div
+  className="header"
+>
+  <nav
+    className="header_container"
+  >
+    <Link
+      className="logo_container"
+      to="/"
+    >
+      <h1
+        className="logo1"
+      >
+        Service
+      </h1>
+      <h1
+        className="logo2"
+      >
+        PRO
+      </h1>
+    </Link>
+    <Link
+      className="header_logged-out"
+      to="/login"
+    >
+      <p>
+        Login
+      </p>
+    </Link>
+  </nav>
+</div>
+`;
