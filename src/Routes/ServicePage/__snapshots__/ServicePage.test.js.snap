@@ -25,6 +25,11 @@ exports[`ServicePage component renders without crashing 1`] = `
           <p
             className="bold"
           >
+            , 
+          </p>
+          <p
+            className="bold"
+          >
             Phone: 
           </p>
           <p
@@ -52,74 +57,76 @@ exports[`ServicePage component renders without crashing 1`] = `
       <div
         className="line"
       />
-      <ReviewForm
-        addReview={[Function]}
-        service={Array []}
-      >
-        <div
-          className="review"
+      <Component>
+        <ReviewForm
+          addReview={[Function]}
+          service={Array []}
         >
-          <h3>
-            Post a Review
-          </h3>
-          <form
-            className="ReviewForm"
-            onSubmit={[Function]}
+          <div
+            className="review"
           >
-            <label>
-              Rating
-            </label>
-            <select
-              className="rating"
-              id="rating"
+            <h3>
+              Post a Review
+            </h3>
+            <form
+              className="ReviewForm"
+              onSubmit={[Function]}
             >
-              <option
-                value="1"
+              <label>
+                Rating
+              </label>
+              <select
+                className="rating"
+                id="rating"
               >
-                1
-              </option>
-              <option
-                value="2"
+                <option
+                  value="1"
+                >
+                  1
+                </option>
+                <option
+                  value="2"
+                >
+                  2
+                </option>
+                <option
+                  value="3"
+                >
+                  3
+                </option>
+                <option
+                  value="4"
+                >
+                  4
+                </option>
+                <option
+                  value="5"
+                >
+                  5
+                </option>
+              </select>
+              <label>
+                Review
+              </label>
+              <textarea
+                aria-label="Leave a review..."
+                className="reviewText"
+                cols="30"
+                id="text"
+                placeholder="Leave a review.."
+                required={true}
+                rows="4"
+              />
+              <button
+                className="reviewPost"
+                type="submit"
               >
-                2
-              </option>
-              <option
-                value="3"
-              >
-                3
-              </option>
-              <option
-                value="4"
-              >
-                4
-              </option>
-              <option
-                value="5"
-              >
-                5
-              </option>
-            </select>
-            <label>
-              Review
-            </label>
-            <textarea
-              aria-label="Leave a review..."
-              className="reviewText"
-              cols="30"
-              id="text"
-              placeholder="Leave a review.."
-              required={true}
-              rows="4"
-            />
-            <button
-              className="reviewPost"
-              type="submit"
-            >
-              Post
-            </button>
-          </form>
-        </div>
-      </ReviewForm>
+                Post
+              </button>
+            </form>
+          </div>
+        </ReviewForm>
+      </Component>
     </div>
   </div>
 </ServicePage>

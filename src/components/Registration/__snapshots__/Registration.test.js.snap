@@ -87,12 +87,38 @@ exports[`Registration component renders without crashing 1`] = `
     >
       Password
     </label>
+    <p
+      className="requires computer"
+    >
+      Uppercase, lowercase, number & special character required
+    </p>
     <input
       id="RegistrationForm_password"
       name="password"
       required={true}
       type="password"
     />
+  </div>
+  <div
+    className="requires mobile"
+  >
+    <p
+      className="requires"
+    >
+      Requirements:
+    </p>
+    <p>
+      • an uppercase letter
+    </p>
+    <p>
+      • a lowercase letter
+    </p>
+    <p>
+      • a number
+    </p>
+    <p>
+      • a special character
+    </p>
   </div>
   <button
     className="registerButton"

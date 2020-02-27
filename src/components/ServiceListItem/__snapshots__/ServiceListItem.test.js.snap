@@ -13,6 +13,11 @@ exports[`ServiceListItem component renders without crashing 1`] = `
       <h3>
         Test Mechanic
       </h3>
+      <p
+        className="bold"
+      >
+        , 
+      </p>
       <p>
         Test
       </p>

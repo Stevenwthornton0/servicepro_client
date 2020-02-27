@@ -18,9 +18,10 @@ exports[`ProviderRegistrationForm component renders without crashing 1`] = `
     </label>
     <select
       id="service_type"
+      required={true}
     >
       <option
-        value="..."
+        value=""
       >
         ...
       </option>
@@ -97,6 +98,7 @@ exports[`ProviderRegistrationForm component renders without crashing 1`] = `
     <input
       id="ProviderRegistration_phone"
       name="phone"
+      pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
       required={true}
       type="tel"
     />

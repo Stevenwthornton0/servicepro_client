@@ -8,6 +8,11 @@ exports[`ServiceItem component renders without crashing 1`] = `
   <p
     className="bold"
   >
+    , 
+  </p>
+  <p
+    className="bold"
+  >
     Phone: 
   </p>
   <p
