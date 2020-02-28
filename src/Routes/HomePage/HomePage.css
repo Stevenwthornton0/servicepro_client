@@ -36,16 +36,43 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width: 500px) {
-    .dunno {
-        width: 70%;
+@media screen and (max-width: 1030px) {
+    .homePage {
+        margin-left: 75px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .homePage {
+        width: 68%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .infoContainer >  h2 {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .infoContainer > h3 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .infoContainer > h3 {
+        font-size: 16px;
+    }
+
+    .optionsContainer {
         margin-left: auto;
         margin-right: auto;
     }
 
     .buttonContainer {
         margin-top: 40px;
-        width: fit-content;
+        width: 100%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -63,6 +90,15 @@
         padding-bottom: 10px;
         background-color: lightblue;
     }
+
+    .dunno {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
 
     .infoContainer {
         width: 100%;
@@ -92,6 +128,8 @@
 
     .homePage {
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .optionsContainer {

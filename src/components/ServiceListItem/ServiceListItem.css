@@ -46,7 +46,7 @@
     font-weight: 500;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 770px) {
     .serviceItem {
         width: 900px;
         margin-bottom: 40px;

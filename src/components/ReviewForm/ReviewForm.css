@@ -46,7 +46,7 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 770px) {
     .ReviewForm {
         width: 30%;
     }

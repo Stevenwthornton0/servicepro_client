@@ -62,7 +62,7 @@
     margin: 30px auto 30px auto; 
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 770px) {
     .servicePage {
         width: 65%;
     }
