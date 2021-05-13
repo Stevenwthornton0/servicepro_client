@@ -54,7 +54,7 @@ class HomePage extends Component {
                     </div>
 
                     <div className='demoUser'>
-                        <h3 clasName='bold'>Demo User</h3>
+                        <h3 className='bold'>Demo User</h3>
                         <p>Username: dunder</p>
                         <p>Password: password</p>
                         <p>This account is an admin and will allow greater function within the app. It is also the owner of the first Mechanic service.</p>
