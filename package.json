@@ -2,7 +2,7 @@
   "name": "servicepro-client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://shielded-island-54017.herokuapp.com:8000",
+  "proxy": "https://servicepro-app.vercel.app:8000",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
