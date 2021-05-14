@@ -3,7 +3,6 @@ import config from '../config';
 const AuthApiService = {
     postLogin(credentials) {
         return fetch(`${config.API_ENDPOINT}/auth/login`, {
-            mode: 'no-cors',
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -15,7 +14,6 @@ const AuthApiService = {
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()    
             )
-            .catch(console.log(error))
     },
 
     postUser(user) {
