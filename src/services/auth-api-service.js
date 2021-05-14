@@ -15,6 +15,7 @@ const AuthApiService = {
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()    
             )
+            .catch(error)
     },
 
     postUser(user) {
