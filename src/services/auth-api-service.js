@@ -5,7 +5,8 @@ const AuthApiService = {
         return fetch(`${config.API_ENDPOINT}/auth/login`, {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(credentials),
         })
@@ -20,7 +21,8 @@ const AuthApiService = {
         return fetch(`${config.API_ENDPOINT}/users`, {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(user)
         })
@@ -36,6 +38,8 @@ const AuthApiService = {
             method: 'GET',
             headers: {
                 'content-type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+
             },
         })
             .then(res => 
