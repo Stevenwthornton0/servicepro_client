@@ -55,9 +55,9 @@ class LoginForm extends Component {
                 className='loginForm'
                 onSubmit={this.handleSubmitJwtAuth}
             >
-                <div role='alert' className='red'>
+                {/* <div role='alert' className='red'>
                     {error && <p className='error'>{error}</p>}
-                </div>
+                </div> */}
                 
                 <div className='username'>
                     <label htmlFor='LoginForm_username'>

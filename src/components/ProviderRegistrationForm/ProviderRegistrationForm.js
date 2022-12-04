@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import ServicesService from '../../services/services-api-service';
 import ServicesContext from '../../contexts/ServicesContext';
 import LoaderSpinner from '../../Utils/LoaderSpinner';
+import { States } from '../../Utils/Utils';
 import './ProviderRegistrationForm.css';
+import { faCity } from '@fortawesome/free-solid-svg-icons';
 
 class ProviderRegistrationForm extends Component {
 
@@ -24,7 +26,7 @@ class ProviderRegistrationForm extends Component {
     handleSubmit = ev => {
         ev.preventDefault()
         this.context.waitingTrue()
-        const { service_type, name, about, phone, email } = ev.target;
+        const { service_type, name, about, phone, email, city, state } = ev.target;
 
         this.setState({ error: null })
         
@@ -33,7 +35,9 @@ class ProviderRegistrationForm extends Component {
             name: name.value,
             about: about.value,
             phone: phone.value,
-            email: email.value
+            email: email.value,
+            city: city.value,
+            state: state.value
         })
             .then(service => {
                 service_type.value='...'
@@ -87,6 +91,21 @@ class ProviderRegistrationForm extends Component {
                         required
                         id='ProviderRegistration_name'
                     />
+                </div>
+                
+                <div>
+                    <label>City</label>
+                    <input 
+                        name='city'
+                        type='text'
+                        required
+                        id='ProviderRegistration_city'
+                    />
+                </div>
+
+                <div>
+                    <label>State</label>
+                    <States />
                 </div>
 
                 <div>
