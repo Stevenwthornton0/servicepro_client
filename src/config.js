@@ -1,6 +1,6 @@
 
 export default {
-    API_ENDPOINT: 'https://git.heroku.com/servicepro-server.git',
+    API_ENDPOINT: 'https://servicepro-server.onrender.com',
     TOKEN_KEY: 'servicepro-client-auth-token',
     USER_KEY: 'servicepro-user-auth-token'
 }
