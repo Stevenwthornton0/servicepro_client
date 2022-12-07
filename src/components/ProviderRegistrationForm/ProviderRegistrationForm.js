@@ -4,7 +4,6 @@ import ServicesContext from '../../contexts/ServicesContext';
 import LoaderSpinner from '../../Utils/LoaderSpinner';
 import { States } from '../../Utils/Utils';
 import './ProviderRegistrationForm.css';
-import { faCity } from '@fortawesome/free-solid-svg-icons';
 
 class ProviderRegistrationForm extends Component {
 

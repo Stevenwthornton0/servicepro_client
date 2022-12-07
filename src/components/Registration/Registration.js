@@ -54,9 +54,9 @@ class Registration extends Component {
                 <h2>Sign Up</h2>
                 <h3>It's quick and easy.</h3>
 
-                {/* <div role='alert' className='red'>
+                <div role='alert' className='red'>
                     {error && <p>{error}</p>}
-                </div> */}
+                </div>
                 <div className='nameContainer'>
                     <div className='first_name'>
                         <label htmlFor='RegistrationForm_first-name'>
